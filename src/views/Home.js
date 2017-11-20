@@ -4,16 +4,14 @@ import React, { Component } from 'react';
 class Home extends Component {
   render() {
     return (
-      <div id="view" className="home">
+      <main id="home" className="view" role="main">
         <div className="container">
-          <header className="App-header">
-            <h1 className="App-title">Welcome to React</h1>
+          <header>
+            <h1>Home</h1>
+            <p>Welcome to SPA11y.</p>
           </header>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
-          </p>
         </div>
-      </div>
+      </main>
     );
   }
 }
