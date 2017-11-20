@@ -3,7 +3,11 @@ import React from 'react';
 
 const Footer = props => (
   <footer id="footer">
-    <p id="logo">logo</p>
+    <div className="container">
+      <p>
+        <small>&copy;2017 belwerks</small>
+      </p>
+    </div>
   </footer>
 );
 
