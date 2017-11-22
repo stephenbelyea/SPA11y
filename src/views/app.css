@@ -1,8 +1,21 @@
+/*
+  Dark blue: #294390
+  Link blue: #4169E1
+  Light blue: #D9E1F9
+  Body grey: #484848
+  White: #EFF3FC
+  Bright white: #FFFFFF
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Bree+Serif');
+
 #app {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 1.5;
   color: #484848;
+  background: #EFF3FC;
   height: auto;
   min-height: 100vh;
   margin: 0 auto;
@@ -12,11 +25,47 @@
                   "footer" auto;
 }
 
+
+h1, h2, h3, #branding {
+  font-family: 'Bree Serif', serif;
+  letter-spacing: .035em;
+}
+
+h1, h2 {
+  color: #294390;
+  margin: 1em 0;
+}
+h1 {
+  font-size: 2.35rem;
+}
+h2 {
+  font-size: 1.85rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 1em 0;
+}
+
 a {
-  color: royalblue;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: underline;
   transition: color .2s;
+}
+.view a {
+  color: #4169E1;
+}
+.view a:hover, .view a:focus {
+  color: #294390;
+}
+#header a, #footer a {
+  color: #FFFFFF;
+}
+#header a:hover, #header a:focus,
+#footer a:hover, #footer a:focus {
+  color: #D9E1F9;
 }
 
 .container {
@@ -26,27 +75,25 @@ a {
 }
 
 #header, #footer {
-  background: #61B1FF;
-  color: #252525;
-}
-
-#header a, #footer a {
-  color: black;
-}
-#header a:hover, #header a:focus,
-#footer a:hover, #footer a:focus {
-  color: #252525;
+  background: #294390;
+  color: #EFF3FC;
 }
 
 #header {
   grid-area: header;
   padding: .5rem 0;
+  box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .25);
 }
 
 #header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#branding {
+  font-size: 1.75rem;
+  margin: .25em 0 .5em;
 }
 
 #header nav ul {
@@ -56,10 +103,11 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  letter-spacing: .02em;
 }
 
 #header nav li {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 .view {
