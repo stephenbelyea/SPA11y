@@ -3,8 +3,17 @@ import axios from 'axios';
 import Main from '../components/Main';
 
 
-const fetchSampleResult = () => {
-  axios.get('https://jsonplaceholder.typicode.com/posts/1')
+const baseUrl = 'https://jsonplaceholder.typicode.com/posts';
+const getRandomPost = () => (Math.floor(Math.random() * 101));
+
+const fetchPostsList = () => {
+  axios.get(baseUrl)
+    .then(result => console.log('data', result.data))
+    .catch(error => console.log('error', error));
+};
+
+const fetchPostItem = () => {
+  axios.get(`${baseUrl}/${getRandomPost()}`)
     .then(result => console.log('data', result.data))
     .catch(error => console.log('error', error));
 };
@@ -12,7 +21,8 @@ const fetchSampleResult = () => {
 
 class Requests extends Component {
   componentDidMount() {
-    fetchSampleResult();
+    fetchPostsList();
+    fetchPostItem();
   }
 
   render() {
