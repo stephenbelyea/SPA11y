@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Home from './Home';
 import Settings from './Settings';
+import Requests from './Requests';
 import NotFound from './NotFound';
 import './app.css';
 
@@ -14,6 +15,7 @@ const App = props => (
     <Switch>
       <Route exact path='/' component={Home}/>
       <Route exact path='/settings' component={Settings}/>
+      <Route exact path='/requests' component={Requests}/>
 
       <Route exact path='*' component={NotFound} />
     </Switch>

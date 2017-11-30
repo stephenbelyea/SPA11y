@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const mainMenuItems = [
   { id: 1, label: 'Home', path: '/' },
   { id: 2, label: 'Settings', path: '/settings' },
+  { id: 3, label: 'Requests', path: '/requests' },
 ];
 
 
