@@ -1,14 +1,13 @@
 import React from 'react';
+import Main from '../components/Main';
 
 
 const Settings = props => (
-  <main id="settings" className="view" role="main">
-    <div className="container">
-      <header>
-        <h1>Settings</h1>
-      </header>
-    </div>
-  </main>
+  <Main id="settings">
+    <header>
+      <h1>Settings</h1>
+    </header>
+  </Main>
 );
 
 

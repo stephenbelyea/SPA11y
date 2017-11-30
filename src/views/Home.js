@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Main from '../components/Main';
 
 
-class Home extends Component {
-  render() {
-    return (
-      <main id="home" className="view" role="main">
-        <div className="container">
-          <header>
-            <h1>Home</h1>
-            <p>Welcome to SPA11y.</p>
-          </header>
-        </div>
-      </main>
-    );
-  }
-}
+const Home = props => (
+  <Main id="home">
+    <header>
+      <h1>Home</h1>
+      <p>Welcome to SPA11y.</p>
+    </header>
+  </Main>
+);
 
 
 export default Home;
