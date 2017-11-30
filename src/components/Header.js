@@ -2,18 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
+const mainMenuItems = [
+  { id: 1, label: 'Home', path: '/' },
+  { id: 2, label: 'Settings', path: '/settings' },
+];
+
+
 const Header = props => (
   <header id="header" role="banner">
     <div className="container">
       <p id="branding">
         <abbr title="Single Page Application Accessibility">SPA11y</abbr>
       </p>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/settings">Settings</Link></li>
-        </ul>
-      </nav>
+      {mainMenuItems.length > 0 &&
+        <nav>
+          <ul>
+            {mainMenuItems.map(item => (
+              <li key={item.id}>
+                <Link to={item.path}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      }
     </div>
   </header>
 );
